@@ -14,7 +14,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     var todos: [String] = []
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(todos.count)
         return todos.count
     }
     
@@ -32,7 +31,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("view did appear")
         let currentTodos = UserDefaults.standard.object(forKey: "todos")
         
         if let tempTodos = currentTodos as? [String] {
